@@ -125,59 +125,59 @@ Para baixar o zip: [https://github.com/huriellopes/Desafio-Crmall/archive/main.z
             - Docker Toolbox
                 - Link: [Instalação](https://www.notion.so/Docker-Toolbox-legacy-7234f5f412444cabb70d0270b1ecc01a)
 
-- **Linux**
-  - Rode os seguintes comandos:
-          ````
-              # Comandos para instalar o docker
-              sudo apt update
-              sudo apt remove docker docker-engine docker.io
-              sudo apt install docker.io
+    - **Linux**
+      - Rode os seguintes comandos:
+              ````
+                  # Comandos para instalar o docker
+                  sudo apt update
+                  sudo apt remove docker docker-engine docker.io
+                  sudo apt install docker.io
               
-              # Habilitar para iniciar automaticamente com o sistema:
-              sudo systemctl start docker
-              sudo systemctl enable docker
+                  # Habilitar para iniciar automaticamente com o sistema:
+                  sudo systemctl start docker
+                  sudo systemctl enable docker
               
-              # Verificando se foi instalado corretamente:
-              docker version
+                  # Verificando se foi instalado corretamente:
+                  docker version
               
-              # Você precisará executar todos comandos do Docker utilizando o sudo, mas caso queira executa-los sem o sudo,utilize:
-              [Guia]https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
+                  # Você precisará executar todos comandos do Docker utilizando o sudo, mas caso queira executa-los sem o sudo,utilize:
+                  [Guia]https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
               
-              # Para instalar o docker-compose, rode o seguinte comando:
-              sudo apt install docker-compose
-  ````
+                  # Para instalar o docker-compose, rode o seguinte comando:
+                  sudo apt install docker-compose
+              ````
 
-- **Para testar no ambiente docker:**
+      - **Para testar no ambiente docker:**
 
-  ````
-    # Copie o arquivo de configuração do docker 
-    copy docker-compose.example.yml docker-compose.yml ou cp docker-compose.example.yml docker-compose.yml
+      ````
+       # Copie o arquivo de configuração do docker 
+       copy docker-compose.example.yml docker-compose.yml ou cp docker-compose.example.yml docker-compose.yml
   
-    environment:
-      POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "YOUR_PASSWORD"
-      POSTGRES_DB: "DATABASE_NAME"
+       environment:
+         POSTGRES_USER: "postgres"
+         POSTGRES_PASSWORD: "YOUR_PASSWORD"
+         POSTGRES_DB: "DATABASE_NAME"
 
-    # O banco de dados está isolado, apenas a aplicação acessa!
+       # O banco de dados está isolado, apenas a aplicação acessa!
   
-    # Para subir os dois containers
-    docker-compose up -d
+       # Para subir os dois containers
+       docker-compose up -d
     
-    # Depois acesse o container de servidor
-    docker exec -it server sh
+       # Depois acesse o container de servidor
+       docker exec -it server sh
     
-    # Rode o composer
-    composer install
+       # Rode o composer
+       composer install
     
-    # Depois o migrate e seed
-    php artisan migrate --seed
+       # Depois o migrate e seed
+       php artisan migrate --seed
     
-    # Caso queira desafazer
-    php artisan migrate:rollback
+       # Caso queira desafazer
+       php artisan migrate:rollback
     
-    # Para acessar no navegador
-    http://localhost
-  ````
+       # Para acessar no navegador
+       http://localhost
+    ````
   
 ## Créditos
 
