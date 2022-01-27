@@ -1,6 +1,6 @@
 # Desafio Crmall
 
-> Desafio proposto pela empresa Crmall, para a posição de Desenvolvedor PHP.
+> Desafio proposto pela empresa CRMALL, para desenvolvimento de uma página de vendas de quadrinhos da marvel, consumindo a api da marvel, para a posição de Desenvolvedor PHP.
 
 ## ⚠ Requisitos:
 
